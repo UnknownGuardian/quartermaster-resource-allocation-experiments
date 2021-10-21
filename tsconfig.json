@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target": "es2019" ,
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist/" ,
+    "downlevelIteration": true,
+    "strict": true ,
+    "esModuleInterop": true ,
+    "forceConsistentCasingInFileNames": true ,
+    "lib": [
+      "es2019"
+    ]
+  },
+}
