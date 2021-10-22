@@ -7,7 +7,16 @@ import { Stage } from "@byu-se/quartermaster";
  * to influence the scale of a subsystem.
  */
 export abstract class ResourceStage extends Stage {
-  constructor(public instanceMemoryAsk: number, public instanceCoreAsk: number) {
+  public instances: number = 0;
+
+  constructor(public instanceMemoryAsk: number, public instanceCoresAsk: number) {
     super();
+  }
+
+  public scale(instances: number): void {
+    this.instances = instances;
+  }
+  public toString(): string {
+    return `Subsystem ${this.constructor.name}: instances = ${this.instances}, instanceMemoryAsk = ${this.instanceMemoryAsk}, instanceCoresAsk = ${this.instanceCoresAsk}`
   }
 }
